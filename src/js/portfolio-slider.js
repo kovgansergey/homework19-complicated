@@ -1,24 +1,22 @@
 $(document).ready(function(){
-  $('.slider').slick({
-  	slidesToShow: 3,
-	  slidesToScroll: 1,
-	  prevArrow: $('.arrows__prev'),
-	  nextArrow: $('.arrows__next'),
-	  responsive: [
-	  	{
-	      breakpoint: 1200,
-	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 1
-	      }
-	    },
-	    {
-	      breakpoint: 992,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    },
-	  ],
+  $(".owl-carousel").owlCarousel({
+  	loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        992:{
+            items:2,
+        },
+        1200:{
+            items:3,
+        }
+    }
   });
+  $(".owl-stage-outer").css({'margin-bottom':'68px'});
+  $(".owl-prev").html('<img src="img/portfolio/left-arrow.png" alt="Назад">');
+  $(".owl-next").html('<img src="img/portfolio/right-arrow.png" alt="Вперед">');
 });
