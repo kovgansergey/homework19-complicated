@@ -16,7 +16,22 @@ $(document).ready(function(){
         }
     }
   });
-  $(".owl-stage-outer").css({'margin-bottom':'68px'});
-  $(".owl-prev").html('<img src="img/portfolio/left-arrow.png" alt="Назад">');
-  $(".owl-next").html('<img src="img/portfolio/right-arrow.png" alt="Вперед">');
+
+  $(".owl-stage-outer").css({'margin-bottom':'66px'});
+
+  $(".owl-prev").html('<img src="img/portfolio/left-arrow.png" alt="Назад">').css({'margin-right':'15px'});;
+  $(".owl-prev").hover(function () {
+    $(this).css({'background-color':'transparent'});
+  });
+  $(".owl-prev").focus(function () {
+    $(this).css({'outline':'none'});
+  });
+
+  $(".owl-next").html('<img src="img/portfolio/right-arrow.png" alt="Вперед">').css({'margin-left':'15px'});;
+  $(".owl-next").hover(function () {
+    $(this).css({'background-color':'transparent'});
+  });
+  $(".owl-next").focus(function () {
+    $(this).css({'outline':'none'});
+  });
 });
